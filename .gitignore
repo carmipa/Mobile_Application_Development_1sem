@@ -1,189 +1,209 @@
-# ---- 🔧 .NET / C# ----
+# ============================
+# 🌐 Full-Stack GitIgnore Config
+# ============================
 
-# Build artifacts
-bin/
-obj/
-*.dll
-*.exe
-*.pdb
-*.mdb
-*.cache
-*.ilk
-*.log
-*.suo
-*.user
-*.ncb
-*.sdf
-*.sqlite
-*.db
+# ====================
+# 🔷 Node.js / React / Next.js
+# ====================
 
-# Visual Studio files
-.vs/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-
-# Rider/JetBrains IDE
-.idea/
-*.iml
-*.ipr
-*.iws
-
-# NuGet Packages
-*.nupkg
-*.snupkg
-packages/
-.nuget/
-
-# Entity Framework migrations and database
-Migrations/
-*.bak
-*.mdf
-*.ldf
-
-# ASP.NET-specific
-appsettings.Development.json
-appsettings.Local.json
-secrets.json
-
-# Docker and Kubernetes
-docker-compose.override.yml
-.dockerignore
-.kube/
-
-# Logs and crash dumps
-logs/
-*.log
-*.dmp
-
-# Test Results
-TestResults/
-coverage/
-.coverage
-*.coverage
-
-# Temporary files
-*.tmp
-*.cache
-*.swp
-
-# ---- 🌐 Node.js / JavaScript / React ----
-
-# Node modules
+# Node Modules e pacotes
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.babelrc
-.eslintcache
-.npmrc
-.vscode/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Next.js build artifacts
-.next/
-.next/cache/
+# Builds e distribuições
 dist/
-
-# React and frontend tools
 build/
-.DS_Store
-*.env
-*.env.local
-*.env.development
-*.env.production
-*.env.test
-
-# Testing and coverage
-jest/
-jest-cache/
-jest-config/
+.out/
+.next/
+.cache/
 coverage/
-*.test.js
-*.spec.js
 
-# Storybook
-storybook-static/
-.storybook/
+# Vite, Parcel e Webpack
+.vite/
+.parcel-cache/
+.webpack/
 
-# Vue.js (caso use)
-*.vue
-.vetur/
-
-# Angular (caso use)
-.angular/
-.angular/cache/
-
-# TypeScript
-*.tsbuildinfo
-
-# ---- 🛠️ Docker e Containers ----
-.dockerignore
-docker-compose.override.yml
-docker-compose.override.local.yml
-
-# ---- 🔍 IDEs e Editores ----
-
-# Visual Studio Code
-.vscode/
-.vscode/*
-
-# JetBrains IDEs
-.idea/
-
-# WebStorm e similares
-*.ws.cache
-*.wsp
-.idea/
-
-# Linux/macOS/Windows system files
-.DS_Store
-Thumbs.db
-ehthumbs.db
+# Logs de execução
+*.log
+logs/
+*.out
+*.err
 *.swp
-*.swo
-*.swn
 
-# ---- 🗂️ Outros arquivos e configurações ----
+# Arquivos temporários
+.temp/
+.tmp/
+*.tmp
+
+# Configuração de ambiente
 .env
 .env.local
 .env.development
 .env.production
 .env.test
-*.log
-*.sqlite
-*.sqlite3
-*.bak
-*.db
 
-# Ignore build tools
-*.exe
-*.out
-*.o
-*.app
-*.dSYM/
-*.framework/
-*.xcworkspace/
+# Firebase e GCP
+.firebase/
+*.firebaserc
+firebase-debug.log
+firebase-error.log
+
+# React Native e Mobile
+.expo/
+.expo-shared/
+android/app/build/
+ios/Pods/
+*.keystore
+*.xcworkspace
+*.xcuserstate
+*.xcodeproj/
+*.xcassets
+
+# Next.js
+.next/
+.vercel/
+.netlify/
+
+# React Native
+*.gradle
+*.idea/
+*.iml
+*.apk
 *.ipa
+*.xcodeproj/
+*.xcworkspace/
+*.expo/
+
+# ===================
+# 🖥️ IDEs e Editores
+# ===================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.ipch
+*.ilk
+*.pdb
+*.obj
+*.cache
+*.aps
+*.ncb
+*.log
+*.sdf
+*.opensdf
+*.VC.db
+
+# IntelliJ IDEA / WebStorm / DataGrip
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse IDE
+.project
+.classpath
+.settings/
+bin/
+target/
+
+# Android Studio
+.gradle/
+.local/
+.cxx/
+.externalNativeBuild/
+captures/
+*.iml
+*.kts
+*.key
+*.keystore
 *.apk
 *.aab
 
-# Python (caso use para automações)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
-.venv/
+# DataGrid
+.datagrid/
+*.tmp
+*.log
 
-# ---- 🔒 Segurança ----
-# Nunca envie arquivos de configuração sensíveis
-secrets.json
-appsettings.json
-appsettings.Development.json
-appsettings.Local.json
+# SQL Developer / DataGrip
+*.sqldeveloper/
+*.dbeaver-data/
+
+# ===================
+# 🌐 Desenvolvimento Web
+# ===================
+
+# HTML, CSS, JS
+*.html~
+*.css~
+*.js~
+*.map
+
+# Cache e arquivos temporários
+.cache/
+.history/
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+
+# WebAssembly
+*.wasm
+
+# Parcel
+.cache/
+
+# Gulp/Grunt
+.grunt/
+.gulp/
+
+# ===================
+# 🔒 Segurança e Configuração
+# ===================
+
+# Configurações sensíveis
+.env
+.env.*
+secrets.yml
 *.pem
 *.key
 *.crt
+
+# Firebase e GCP
+.firebase/
+.firebase-debug.log
+firebase-debug.log
+
+# Docker e Kubernetes
+.dockerignore
+docker-compose.override.yml
+.kube/
+
+# ===================
+# 🛑 Arquivos do Sistema
+# ===================
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*.swp
+*.swo
 
