@@ -1,0 +1,189 @@
+# ---- 🔧 .NET / C# ----
+
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.cache
+*.ilk
+*.log
+*.suo
+*.user
+*.ncb
+*.sdf
+*.sqlite
+*.db
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider/JetBrains IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Entity Framework migrations and database
+Migrations/
+*.bak
+*.mdf
+*.ldf
+
+# ASP.NET-specific
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Docker and Kubernetes
+docker-compose.override.yml
+.dockerignore
+.kube/
+
+# Logs and crash dumps
+logs/
+*.log
+*.dmp
+
+# Test Results
+TestResults/
+coverage/
+.coverage
+*.coverage
+
+# Temporary files
+*.tmp
+*.cache
+*.swp
+
+# ---- 🌐 Node.js / JavaScript / React ----
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.babelrc
+.eslintcache
+.npmrc
+.vscode/
+
+# Next.js build artifacts
+.next/
+.next/cache/
+dist/
+
+# React and frontend tools
+build/
+.DS_Store
+*.env
+*.env.local
+*.env.development
+*.env.production
+*.env.test
+
+# Testing and coverage
+jest/
+jest-cache/
+jest-config/
+coverage/
+*.test.js
+*.spec.js
+
+# Storybook
+storybook-static/
+.storybook/
+
+# Vue.js (caso use)
+*.vue
+.vetur/
+
+# Angular (caso use)
+.angular/
+.angular/cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# ---- 🛠️ Docker e Containers ----
+.dockerignore
+docker-compose.override.yml
+docker-compose.override.local.yml
+
+# ---- 🔍 IDEs e Editores ----
+
+# Visual Studio Code
+.vscode/
+.vscode/*
+
+# JetBrains IDEs
+.idea/
+
+# WebStorm e similares
+*.ws.cache
+*.wsp
+.idea/
+
+# Linux/macOS/Windows system files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*.swo
+*.swn
+
+# ---- 🗂️ Outros arquivos e configurações ----
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.log
+*.sqlite
+*.sqlite3
+*.bak
+*.db
+
+# Ignore build tools
+*.exe
+*.out
+*.o
+*.app
+*.dSYM/
+*.framework/
+*.xcworkspace/
+*.ipa
+*.apk
+*.aab
+
+# Python (caso use para automações)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+
+# ---- 🔒 Segurança ----
+# Nunca envie arquivos de configuração sensíveis
+secrets.json
+appsettings.json
+appsettings.Development.json
+appsettings.Local.json
+*.pem
+*.key
+*.crt
+
