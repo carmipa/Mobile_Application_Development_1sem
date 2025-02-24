@@ -1,20 +1,24 @@
+
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import MaiorNumero from './components/maiorValor';
-import Numero from './components/numeros';  
+import MaiorNumero from './components/maiorNumero';
+import Numero from './components/numeros'; // importe seu componente Numero
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Maior Número entre Três Valores</Text>
-      <MaiorNumero num1={15} num2={42} num3={9} />
 
-      <Text style={styles.title}>Verificação de Número</Text>
-      <Numero valor={10} />    
-      <Numero valor={-5} />    
-      <Numero valor={0} />     
+      <Text style={styles.heading}>Maior número</Text>
+      <Text style={styles.title}>Desafio</Text>
+      <MaiorNumero n1={15} n2={42} n3={9} />
 
       <StatusBar style="auto" />
+
+      <Text style={styles.heading}>Tipo de número</Text>
+      <Numero valor={15} />
+      <Numero valor={-42} />
+      <Numero valor={0} />
     </View>
   );
 }
@@ -25,10 +29,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
+  },
+  heading: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    marginVertical: 10,
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginVertical: 20,
-  }
+    marginBottom: 20,
+  },
 });
