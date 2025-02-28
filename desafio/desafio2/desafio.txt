@@ -1,0 +1,5 @@
+Nível 01 – Incluir dois TextInput, e mostrar as informações de nomeAluno e emailAluno no console.log
+ 
+Nível 02 - Incluir dois TextInput e um Button, e após inserir as informações nos TextInput’s deverá ser renderizado na tela a informação do nomeAluno e emailAluno.
+ 
+Nível 03 - Incluir dois TextInput e um Button, e passar o nomeAluno e emailAluno via props para um componentes e em seguida renderizar na tela Principal do seu App.
