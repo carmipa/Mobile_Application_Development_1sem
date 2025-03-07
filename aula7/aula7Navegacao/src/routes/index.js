@@ -5,7 +5,7 @@ import DrawerRoutes from "./drawer.routes";
 export default function App() {
     return(
         <NavigationContainer>
-            <TabRoutes />
+            {/* <TabRoutes /> */}
             <DrawerRoutes />
         </NavigationContainer>
     )
