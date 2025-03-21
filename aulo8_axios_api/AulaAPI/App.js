@@ -10,8 +10,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="TelaInicial" component={TelaInicial} />
-        <Stack.Screen name="TelaResultado" component={TelaResultado} />
+        <Stack.Screen name="TelaInicial" component={TelaInicial} options={{ headerShown: false }} />
+        <Stack.Screen name="TelaResultado" component={TelaResultado} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
     
