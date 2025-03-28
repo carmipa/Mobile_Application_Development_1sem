@@ -12,6 +12,7 @@
     "@expo/metro-runtime": "~4.0.1",
     "@react-navigation/native": "^7.0.15",
     "@react-navigation/stack": "^7.1.2",
+    "aulaapi": "file:",
     "axios": "^1.8.3",
     "expo": "~52.0.38",
     "expo-image": "^2.0.6",
