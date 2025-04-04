@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { useState, userEffect } from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
 import { TextInputMask} from "react-native-masked-text";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -11,6 +11,10 @@ export default function App() {
     const [nomeProduto, setNomeProduto] = useState('');
     const [precoProduto, setPrecoProduto] = useState();
     const [listaProdutos, setListaProdutos] = useState([])
+
+    userEffect(()=>{
+        BuscarDados()
+    },[])
 
     // função cadastrar
     async function Cadastrar(){
@@ -33,6 +37,9 @@ export default function App() {
 
         alert("PRODUTO SALVO")
 
+        setNomeProduto("")
+        setPrecoProduto("")
+
         BuscarDados()
 
     }
@@ -41,6 +48,15 @@ export default function App() {
         const p = await AsyncStorage.getItem("PRODUTOS");
         setListaProdutos(JSON.parse(p))
         console.log(p)
+    }
+
+    async function deletarProduto(index){
+        const tempDados = listaProdutos
+        const dados = tempDados.filter((item, ind)=>{
+            return ind!==index
+        })
+        setListaProdutos(dados)
+        await AsyncStorage.setItem("PRODUTOS", JSON.stringify (dados))
     }
 
     return (
@@ -69,11 +85,19 @@ export default function App() {
             
             <FlatList
                 data={listaProdutos}
-                renderItem={({item, indice})=>{
+                renderItem={({item, index})=>{
+
+                    if(!item || !item.nome) return null; // garantir que não sejam nulos item e item.nome
+
                     return(
                         <View style={styles.listarFlat}>
                             <View>
                                 <Text>Preço: {item.nome} - Preço: {item.preco}</Text>
+                            </View>
+                            <View>
+                                <TouchableOpacity style={styles.btnExluir} onPress={()=>DeletarProduto(index)}>
+                                    <Text>Excluir</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     )
@@ -118,6 +142,11 @@ const styles = StyleSheet.create({
         height:50,
         marginVertical: 3,
         borderRadius: 15
-    }
+    },
+    btnExluir:{
+        backgroundColor:"red",
+        width: "100%",
+        borderRadius: 15,
+        alignItems:'center',
 
 });
