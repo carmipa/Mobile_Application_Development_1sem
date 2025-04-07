@@ -11,6 +11,8 @@ export default function App() {
     const [nomeProduto, setNomeProduto] = useState('');
     const [precoProduto, setPrecoProduto] = useState();
     const [listaProdutos, setListaProdutos] = useState([])
+    const [produtoEditado, setProdutoEditado]= useState(null)
+
 
     userEffect(()=>{
         BuscarDados()
@@ -26,6 +28,12 @@ export default function App() {
             produtos = JSON.parse(await AsyncStorage.getItem("PRODUTOS"));
         }
 
+        if(produtoEditado){
+            produtos[produtoEditado.index] = {nome:nomeProduto,preco:precoProduto}
+        }else{
+            produtos.push({nome:nomeProduto,preco:precoProduto})
+        }
+
         produtos.push
         ({
             nome:nomeProduto,
@@ -35,7 +43,7 @@ export default function App() {
         // salvando os dados no async storage
         await AsyncStorage.setItem("PRODUTOS", JSON.stringify(produtos))
 
-        alert("PRODUTO SALVO")
+        alert(produtoEditado?"PRODUTO ATUALIZADO":"PRODUTO CADASTRADO")
 
         setNomeProduto("")
         setPrecoProduto("")
@@ -59,6 +67,13 @@ export default function App() {
         await AsyncStorage.setItem("PRODUTOS", JSON.stringify (dados))
     }
 
+    function EditoarProduto(index){
+        const produto = listaProdutos[index]
+        setNomeProduto(produto.nome)
+        setPrecoProduto(produto.preco)
+        setProdutoEditado({index})
+    }
+
     return (
         <View style={styles.container}>
             <Text>CADASTRO</Text>
@@ -80,7 +95,7 @@ export default function App() {
                 keyboardType={'numeric'}
             />
             <TouchableOpacity style={styles.btn} onPress={Cadastrar}>
-                <Text style={{color:"white"}}>Salvar</Text>
+                <Text style={{color:"white"}}>{produtoEditado?"ATUALIZAR":"SALVAR"}</Text>
             </TouchableOpacity>
             
             <FlatList
@@ -94,9 +109,13 @@ export default function App() {
                             <View>
                                 <Text>Preço: {item.nome} - Preço: {item.preco}</Text>
                             </View>
-                            <View>
+                            <View style={{flexDirection:"row"}}>
                                 <TouchableOpacity style={styles.btnExluir} onPress={()=>DeletarProduto(index)}>
                                     <Text>Excluir</Text>
+                                </TouchableOpacity>
+
+                                <TouchableOpacity style={styles.btnEdita} onPress={()=>EditarProduto(index)}>
+                                    <Text>Editar</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -148,5 +167,12 @@ const styles = StyleSheet.create({
         width: "100%",
         borderRadius: 15,
         alignItems:'center',
+    },
+    btnEditar:{
+            backgroundColor:"red",
+            width: "100%",
+            borderRadius: 15,
+            alignItems:'center',
+    }
 
 });
