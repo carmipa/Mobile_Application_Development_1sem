@@ -1,16 +1,11 @@
 {
   "expo": {
-<<<<<<<< HEAD:teste/app.json
-    "name": "teste",
-    "slug": "teste",
-========
-    "name": "Aula07Navegacao",
-    "slug": "Aula07Navegacao",
->>>>>>>> 2fd51ca48480845da238ed54b82178f16519090b:aula07Navegacao-pz-main/app.json
+    "name": "ArmazenamentoLocal",
+    "slug": "ArmazenamentoLocal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
@@ -24,10 +19,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.carmipa.ArmazenamentoLocal"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "637dad7a-acf5-46d4-815b-2d8abd3ce301"
+      }
     }
   }
 }

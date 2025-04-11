@@ -1,17 +1,13 @@
 {
   "expo": {
-<<<<<<<< HEAD:teste/app.json
-    "name": "teste",
-    "slug": "teste",
-========
-    "name": "Aula07Navegacao",
-    "slug": "Aula07Navegacao",
->>>>>>>> 2fd51ca48480845da238ed54b82178f16519090b:aula07Navegacao-pz-main/app.json
+    "name": "ExpoRoute",
+    "slug": "ExpoRoute",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+    "scheme": "ExpoRoute",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
@@ -28,6 +24,17 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0f4fd643-e303-49d1-8930-1975478d2100"
+      }
     }
   }
 }
