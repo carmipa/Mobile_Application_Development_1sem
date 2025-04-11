@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "texte1",
-    "slug": "texte1",
+    "name": "teste",
+    "slug": "teste",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
