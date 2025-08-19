@@ -1,5 +1,10 @@
 # 📱 **Mobile Application Development – 1º Semestre - TDS - FIAP 2025**
 
+## 🔶 **Professor**
+Fernando Pinéo de Abreu
+
+---
+
 ## 🔶 **Conteúdo da disciplina**
 Lista dos principais temas e práticas trabalhadas em sala, utilizando **React Native** e **Expo**:
 
